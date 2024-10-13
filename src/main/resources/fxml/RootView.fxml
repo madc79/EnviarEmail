@@ -12,12 +12,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <GridPane hgap="4.0" vgap="5.0" BorderPane.alignment="CENTER">
+      <GridPane fx:id="interfazPane" hgap="4.0" vgap="5.0" BorderPane.alignment="CENTER">
         <columnConstraints>
-            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
           <ColumnConstraints hgrow="SOMETIMES" />
           <ColumnConstraints hgrow="SOMETIMES" />
             <ColumnConstraints hgrow="SOMETIMES" />
@@ -56,42 +55,42 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </Label>
-            <TextArea promptText="Mensaje" GridPane.columnSpan="4" GridPane.rowIndex="5">
+            <TextArea fx:id="mensajeText" promptText="Mensaje" GridPane.columnSpan="4" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextArea>
-            <TextField promptText="Nombre o Ip del servidor" GridPane.columnIndex="1" GridPane.columnSpan="2">
+            <TextField fx:id="nombreText" promptText="Nombre o Ip del servidor" GridPane.columnIndex="1" GridPane.columnSpan="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextField>
-            <TextField promptText="Puerto" GridPane.columnIndex="3">
+            <TextField fx:id="puertoText" promptText="Puerto" GridPane.columnIndex="3">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextField>
-            <TextField promptText="Email del remitente" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="remitenteText" promptText="Email del remitente" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextField>
-            <TextField promptText="Contraseña" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+            <TextField fx:id="contraseñaText" promptText="Contraseña" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextField>
-            <TextField promptText="Email del destinatario" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+            <TextField fx:id="destinatarioText" promptText="Email del destinatario" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextField>
-            <TextField promptText="Asunto del mensaje" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+            <TextField fx:id="asuntoText" promptText="Asunto del mensaje" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextField>
-            <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="conexionText" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
          <BorderPane.margin>
             <Insets />
@@ -99,19 +98,19 @@
       </GridPane>
    </center>
    <right>
-      <VBox alignment="TOP_CENTER" prefHeight="394.0" prefWidth="58.0" spacing="3.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="botonesBox" alignment="TOP_CENTER" prefHeight="394.0" prefWidth="58.0" spacing="3.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Enviar">
+            <Button fx:id="enviarButton" mnemonicParsing="false" onAction="#OnEnviarButton" text="Enviar">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Vacíar">
+            <Button fx:id="vaciarButton" mnemonicParsing="false" onAction="#OnVaciarButton" text="Vacíar">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Cerrar">
+            <Button fx:id="cerrarButton" mnemonicParsing="false" onAction="#OnCerrarButton" text="Cerrar">
                <VBox.margin>
                   <Insets />
                </VBox.margin>

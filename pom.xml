@@ -15,7 +15,6 @@
     <maven.compiler.source>21</maven.compiler.source>
     <exec.mainClass>dad.enviaremail.Main</exec.mainClass>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <exec.mainClass>dad.enviaremail.Main</exec.mainClass>
   </properties>
 
   <dependencies>
